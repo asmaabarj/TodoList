@@ -1,6 +1,5 @@
 <div class="max-w-2xl mx-auto p-4 md:p-8">
     <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-        <!-- En-tête du formulaire -->
         <div class="bg-gradient-to-r from-[#0052CC] to-[#0747A6] p-6">
             <h2 class="text-2xl font-bold text-white flex items-center gap-3 group">
                 <svg class="w-7 h-7 transform group-hover:rotate-12 transition-all duration-300" 
@@ -12,10 +11,8 @@
             </h2>
         </div>
 
-        <!-- Formulaire -->
         <form (ngSubmit)="onSubmit()" #categoryForm="ngForm" class="p-6">
             <div class="space-y-6">
-                <!-- Champ Nom de catégorie -->
                 <div class="form-group">
                     <label for="categoryName" 
                            class="block text-sm font-medium text-gray-700 mb-2 flex items-center gap-2">
@@ -38,7 +35,6 @@
                                       {{ categoryNameInput.invalid && categoryNameInput.touched ? 'border-red-500' : 'border-gray-300' }}"
                                [class.animate-shake]="categoryNameInput.invalid && categoryNameInput.touched"/>
                         
-                        <!-- Icône de validation -->
                         <div class="absolute right-3 top-1/2 transform -translate-y-1/2 transition-all duration-300"
                              [class.opacity-0]="categoryNameInput.invalid || !categoryNameInput.touched">
                             <svg class="w-5 h-5 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -47,7 +43,6 @@
                         </div>
                     </div>
 
-                    <!-- Messages d'erreur avec animations -->
                     <div class="mt-2 space-y-1">
                         <div *ngIf="categoryNameInput.invalid && categoryNameInput.touched"
                              class="text-sm text-red-500 transform origin-left transition-all duration-300">
@@ -71,7 +66,6 @@
                     </div>
                 </div>
 
-                <!-- Bouton de soumission -->
                 <div class="flex justify-end">
                     <button type="submit" 
                             [disabled]="categoryForm.invalid"
