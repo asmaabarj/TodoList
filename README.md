@@ -1,27 +1,60 @@
-# TodoListApp
+Task Management Application
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.11.
+A modern task management application built with Angular and Tailwind CSS that helps users organize their tasks, track progress, and manage categories efficiently.
 
-## Development server
+Features
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Task Management
 
-## Code scaffolding
+💡 Create, edit, and delete tasks
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+🔥 Set priorities (High, Medium, Low)
 
-## Build
+📈 Track status (Not Started, In Progress, Completed)
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+🗓️ Manage due dates with validation
 
-## Running unit tests
+Category Management
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+📂 Create and manage task categories
 
-## Running end-to-end tests
+🔑 Validate unique category names
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+⚡ Real-time updates
 
-## Further help
+Search & Statistics
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+🔍 Search tasks by name or description
+
+📊 Real-time statistics dashboard
+
+✅ Track completion percentages
+
+Technologies Used
+
+🎨 Frontend: Angular 17
+
+💅 Styling: Tailwind CSS
+
+Installation
+
+Clone the repository:
+
+    git clone https://github.com/JavaAura/Termoussi_Lamiaa_S5_B1_ToDoList-.git
+Navigate to the project directory:
+
+    cd ToDoList
+
+Install dependencies:
+
+    npm install
+
+Run the application:
+
+    ng serve
+
+
+Author and Contact Information
+
+    Termoussi Lamiaa 
+    Email: lamiaa3105@gmail.com
