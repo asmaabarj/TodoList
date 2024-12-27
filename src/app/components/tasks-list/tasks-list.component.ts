@@ -43,4 +43,26 @@ export class TasksListComponent implements OnInit {
     this.toggleTaskForm();
   }
 
+  onUpdateTask(task: Task) {
+    this.showTaskForm = true;
+    this.taskToUpdate = task;
+  }
+
+  onDeleteTask(taskId: number): void {
+    if (confirm('Are you sure you want to delete this task?')) {
+      this.taskService.deleteTask(taskId);  
+    }
+  }
+  
+  onSearch(): void {
+    if (this.searchQuery.trim()) {
+      this.filteredTasks = this.tasks.filter(task =>
+        task.title.toLowerCase().includes(this.searchQuery.toLowerCase()) ||
+        task.description.toLowerCase().includes(this.searchQuery.toLowerCase())
+      );
+      console.log(this.filteredTasks);
+    } else {
+      this.filteredTasks = this.tasks;  
+    }
+  }
 }

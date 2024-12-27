@@ -20,6 +20,7 @@
             </button>
         </div>
 
+        <!-- Barre de recherche améliorée -->
         <div class="mb-8">
             <div class="relative group">
                 <input type="text" 
@@ -34,6 +35,7 @@
             </div>
         </div>
 
+        <!-- Liste des tâches -->
         <div class="grid gap-4">
             <div *ngFor="let task of filteredTasks"
                 class="bg-white rounded-lg p-6 border border-gray-100 shadow-md hover:shadow-lg 
@@ -41,7 +43,6 @@
                 <div class="flex flex-col md:flex-row justify-between gap-4">
                     <!-- Contenu de la tâche -->
                     <div class="flex-1 space-y-3">
-                        <!-- Badges de statut et priorité -->
                         <div class="flex flex-wrap items-center gap-3">
                             <span [ngClass]="{
                                 'bg-green-100 text-green-800 border-green-200': task.status === 'completed',
@@ -65,11 +66,9 @@
                             </span>
                         </div>
 
-                        <!-- Titre et description -->
                         <h2 class="text-xl font-semibold text-gray-800">{{ task.title }}</h2>
                         <p class="text-gray-600">{{ task.description }}</p>
 
-                        <!-- Métadonnées -->
                         <div class="flex flex-wrap items-center gap-4 text-sm text-gray-500">
                             <span class="flex items-center gap-2">
                                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -88,9 +87,8 @@
                         </div>
                     </div>
 
-                    <!-- Boutons d'action -->
                     <div class="flex flex-row md:flex-col gap-3 justify-end">
-                        <button
+                        <button (click)="onUpdateTask(task)" 
                                 class="group p-2 rounded-full bg-amber-500 hover:bg-amber-600 
                                        text-white transition-all duration-300 hover:shadow-lg
                                        relative hover:scale-110"
@@ -101,7 +99,7 @@
                                       d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"/>
                             </svg>
                         </button>
-                        <button  
+                        <button (click)="onDeleteTask(task.id)" 
                                 class="group p-2 rounded-full bg-red-500 hover:bg-red-600 
                                        text-white transition-all duration-300 hover:shadow-lg
                                        relative hover:scale-110"
