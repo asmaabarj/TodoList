@@ -67,17 +67,12 @@ export class TaskFormComponent {
       return;
     }
     try {
-      if (this.taskToUpdate) {
-        const updatedTask: Task = { ...this.task };
-        this.taskService.updateTask(updatedTask);
-        console.log('Task updated:', updatedTask);
-        this.taskSaved.emit(updatedTask);
-      } else {
+
         const newTask: Task = { ...this.task, id: Date.now() }; 
         this.taskService.addTask(newTask);
         console.log('Task added:', newTask);
         this.taskSaved.emit(newTask);
-      }
+      
       this.resetForm(); 
     } catch (error: any) {
       this.errorMessage = `Error: ${error.message || 'An unknown error occurred'}`;
