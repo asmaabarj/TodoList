@@ -1,9 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { ActivatedRoute, NavigationStart, Router } from '@angular/router';
 import { CategoryService } from '../../services/category.service';
-import { Subscription } from 'rxjs';
 import { Category } from '../../models/category.model';
 
 @Component({
@@ -35,11 +33,9 @@ export class CategoryFormComponent {
         if (this.categoryToUpdate) {
           updatedCategory = { ...this.categoryToUpdate, name: this.categoryName };
           this.categoryService.updateCategory(this.categoryToUpdate, this.categoryName);
-          console.log('Category Updated:', updatedCategory);
         } else {
           updatedCategory = { name: this.categoryName };
           this.categoryService.addCategory(updatedCategory);
-          console.log('Category Added:', updatedCategory);
         }
         this.categorySaved.emit(updatedCategory);
 

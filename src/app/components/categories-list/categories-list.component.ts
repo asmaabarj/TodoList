@@ -38,11 +38,9 @@ export class CategoriesListComponent implements OnInit {
   onCategorySaved(category: Category) {
     this.showCategoryForm = false;
     this.categoryToUpdate = null; 
-    console.log('Category saved:', category);
   }
   
   onDeleteCategory(category: Category) {
-    console.log(' Category to delete:', category);
      this.categoryService.deleteCategory(category);  
        
   }

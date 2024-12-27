@@ -26,7 +26,6 @@ export class CategoryService {
 
   updateCategory(categoryToUpdate: Category, newCategoryName: string) {
     const currentCategories = this.categoriesSource.value;
-    //category name must be unique
     const categoryExists = currentCategories.some(
       (cat) => cat.name.toLowerCase() === newCategoryName.toLowerCase() && cat.name !== categoryToUpdate.name
     );
@@ -39,7 +38,6 @@ export class CategoryService {
 
     if (categoryIndex !== -1) {
       currentCategories[categoryIndex] = { name: newCategoryName };
-      // Emit the updated list
       this.categoriesSource.next([...currentCategories]);
     }
   }
