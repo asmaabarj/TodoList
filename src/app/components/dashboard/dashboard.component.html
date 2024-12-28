@@ -8,5 +8,50 @@
         </h2>
     </div>
 
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition-all duration-300">
+            <div class="bg-gradient-to-r from-emerald-500 to-green-500 p-4">
+                <div class="flex items-center justify-between">
+                    <svg class="w-8 h-8 text-white animate-pulse" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                    </svg>
+                    <span class="text-4xl font-bold text-white">{{ completedPercentage | number:'1.0-2' }}%</span>
+                </div>
+            </div>
+            <div class="p-4">
+                <h3 class="text-lg font-semibold text-gray-800 mb-2">Tâches Terminées</h3>
+                <p class="text-sm text-gray-600">Progression globale du projet</p>
+            </div>
+        </div>
 
+        <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition-all duration-300">
+            <div class="bg-gradient-to-r from-amber-400 to-yellow-500 p-4">
+                <div class="flex items-center justify-between">
+                    <svg class="w-8 h-8 text-white animate-pulse" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                    </svg>
+                    <span class="text-4xl font-bold text-white">{{ notCompletedPercentage | number:'1.0-2' }}%</span>
+                </div>
+            </div>
+            <div class="p-4">
+                <h3 class="text-lg font-semibold text-gray-800 mb-2">Tâches en Attente</h3>
+                <p class="text-sm text-gray-600">Tâches à traiter</p>
+            </div>
+        </div>
+
+        <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition-all duration-300">
+            <div class="bg-gradient-to-r from-rose-500 to-red-500 p-4">
+                <div class="flex items-center justify-between">
+                    <svg class="w-8 h-8 text-white animate-pulse" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                    </svg>
+                    <span class="text-4xl font-bold text-white">{{ overdueTasksCount }}</span>
+                </div>
+            </div>
+            <div class="p-4">
+                <h3 class="text-lg font-semibold text-gray-800 mb-2">Tâches en Retard</h3>
+                <p class="text-sm text-gray-600">Nécessitent une attention immédiate</p>
+            </div>
+        </div>
+    </div>
 </div>
