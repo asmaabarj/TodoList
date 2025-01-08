@@ -14,13 +14,13 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have the 'ToDoList' title`, () => {
+  it(`devrait avoir le titre 'ToDoList'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
     expect(app.title).toEqual('ToDoList');
   });
 
-  it('should render title', () => {
+  it('devrait afficher le titre', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;

@@ -114,7 +114,7 @@ Le tableau de bord offre une vue interactive des statistiques sur l'état des t�
 ---
 
 ## 📋 Planification sur Jira
-- Lien vers le tableau Jira : [Accéder à Jira](https://asmaabarj5.atlassian.net/jira/software/projects/TOD/boards/397/backlog?epics=visible)
+- Lien vers le tableau Jira : [Accéder à Jira](https://asmaabarj5.atlassian.net/jira/software/projects/TOD/boards/397/backlog?epics=visible )
 
 ## 🎨 Lien de Maquettage sur Figma
   - [Voir le projet sur Figma](https://www.figma.com/design/a7qgsSmCnpkWfgfI0GlAy8/ToDoList?node-id=0-1&t=ESnbaEkZcZ9pSxr0-1)

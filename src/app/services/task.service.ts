@@ -32,5 +32,11 @@ export class TaskService {
     const updatedTasks = currentTasks.filter(task => task.id !== taskId);
     this.tasksSource.next(updatedTasks)
   }
+
+  deleteTasksByCategory(categoryName: string): void {
+    const currentTasks = this.tasksSource.value;
+    const updatedTasks = currentTasks.filter(task => task.categoryName !== categoryName);
+    this.tasksSource.next(updatedTasks);
+  }
     
 }
